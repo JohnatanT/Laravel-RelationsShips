@@ -5,5 +5,6 @@
 
 */
 
-Route::get('/', 'OneToOneController@oneToOne');
-Route::get('inverse', 'OneToOneController@oneToOneInverse');
+Route::get('OneToOne', 'OneToOneController@oneToOne');
+Route::get('OneToOneInverse', 'OneToOneController@oneToOneInverse');
+Route::get('OneToOneInsert','OneToOneController@oneToOneInsert');

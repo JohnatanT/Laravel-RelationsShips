@@ -9,6 +9,7 @@ use App\Models\Location;
 class OneToOneController extends Controller
 {
 
+    //Recuperar dados One to One
     public function oneToOne()
     {
       $country = new Country();
@@ -20,6 +21,7 @@ class OneToOneController extends Controller
 
     }
 
+    //Recuperar dados One to One inverso
     public function oneToOneInverse()
     {
       $latitude = 123;
@@ -34,7 +36,23 @@ class OneToOneController extends Controller
       echo $country->name;
     }
 
+    //Inserindo dados de um formulário para One to One
+    public function OneToOneInsert(Request $request)
+    {
+      //Simulando os dados do formulario
+      $dataForm = [
+          'name'          => 'Alemanha',
+          'longitude'     => '789',
+          'latitude'      => '987'
+      ];
 
+      //Inserindo nome do País
+      $country = Country:created($dataForm);
+      //Recuperando ID inserido
+      $dataForm = ['country_id'] = $country->id;
+      //Inserindo ID do páis e latitude,longitude
+      $location = Location::created($dataForm);
+    }
 
 
 }

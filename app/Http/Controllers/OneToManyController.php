@@ -34,7 +34,7 @@ class OneToManyController extends Controller
 
           foreach ($states as $state) {
             echo $state->name . "<br>";
-            
+
             foreach ($state->cities as $city) {
               echo $city->name . "<br>";
             }
@@ -42,6 +42,18 @@ class OneToManyController extends Controller
           }
       }
 
+    }
+
+    public function oneToManyInsert()
+    {
+      //Simulando Dados do formulários
+      $dataForm = [
+        'name'        => 'Ceará',
+        'initials'    => 'CE',
+        'country_id'  => '2'
+      ];
+
+      $insertState = State::created($dataForm);
 
     }
 

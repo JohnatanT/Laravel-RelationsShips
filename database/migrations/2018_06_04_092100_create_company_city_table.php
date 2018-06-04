@@ -17,7 +17,7 @@ class CreateCompanyCityTable extends Migration
             $table->increments('id');
             $table->integer('city_id')->unsigned();
             $table->integer('company_id')->unsigned();
-            $table->string('name',100);
+            
 
             $table->foreign('city_id')
                   ->references('id')

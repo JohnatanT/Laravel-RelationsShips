@@ -30,4 +30,23 @@ class ManyToManyController extends Controller
         echo $city->name;
       }
     }
+
+    public function manyToManyInsert()
+    {
+      //Simulando dados do formulario
+      $dataForm = [3,4,5];
+
+      //Empresa a ser vinculada
+      $company = Company::find(1);
+
+      //Faz o vinculo
+      //$company->cities()->attach($dataForm);
+      $company->cities()->sync($dataForm);
+
+      //Remove o vinculo
+      //$company->cities()->detach($dataForm);
+
+    }
+
+
 }

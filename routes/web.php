@@ -14,3 +14,4 @@ Route::get('OneToManyTwo','OneToManyController@oneToManyTwo');
 Route::get('OneToManyInsert','OneToManyController@oneToManyInsert');
 
 Route::get('ManyToMany','ManyToManyController@manyToMany');
+Route::get('ManyToManyInverse','ManyToManyController@manyToManyInverse');

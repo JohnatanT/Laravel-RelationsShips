@@ -19,5 +19,9 @@ class Country extends Model
     return $this->hasMany(State::class);
   }
 
+  public function comments()
+  {
+    return $this->morphMany(Comment::class,'commentable');
+  }
 
 }

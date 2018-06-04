@@ -19,3 +19,4 @@ Route::get('ManyToManyInverse','ManyToManyController@manyToManyInverse');
 Route::get('ManyToManyInsert','ManyToManyController@manyToManyInsert');
 //Relation Polymorphic
 Route::get('polymorphic','PolymorphicController@polymorphic');
+Route::get('polymorphicInsert','PolymorphicController@polymorphicInsert');
